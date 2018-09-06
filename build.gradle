@@ -1,0 +1,68 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.4.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+		
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'co.com.ceiba.cds'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	maven 
+   		{
+       		url = 'http://artifactory.ceiba.com.co/artifactory/remote-repos/'
+   		}
+	mavenCentral()
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter')
+	compile 'org.springframework.boot:spring-boot-starter-web'
+	
+	// https://mvnrepository.com/artifact/org.drools/drools-core
+	compile group: 'org.drools', name: 'drools-core', version: '7.9.0.Final'
+
+	// https://mvnrepository.com/artifact/org.kie/kie-ci
+	compile group: 'org.kie', name: 'kie-ci', version: '7.9.0.Final'
+
+	
+	//Dependencia de artefactory
+	//compile(group: 'co.com.ceiba', name: 'cds_prueba_kjar')
+	
+	// https://mvnrepository.com/artifact/org.kie/kie-spring
+	compile group: 'org.kie', name: 'kie-spring', version: '7.9.0.Final'
+	
+	// https://mvnrepository.com/artifact/org.eclipse.aether/aether-impl
+	compile group: 'org.eclipse.aether', name: 'aether-impl', version: '1.1.0'
+	
+	// https://mvnrepository.com/artifact/com.google.code.guice/guice
+	compile group: 'com.google.code.guice', name: 'guice', version: '1.0', ext: 'pom'
+	
+	// https://mvnrepository.com/artifact/xerces/xercesImpl
+	compile group: 'xerces', name: 'xercesImpl', version: '2.11.0.SP5'
+	
+	
+	
+	// https://mvnrepository.com/artifact/org.eclipse.jgit/org.eclipse.jgit
+    compile group: 'org.eclipse.jgit', name: 'org.eclipse.jgit', version: '4.11.0.201803080745-r'
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+    // https://mvnrepository.com/artifact/com.dyngr/polling
+    compile group: 'com.dyngr', name: 'polling', version: '1.1.1'
+    	
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+
+}

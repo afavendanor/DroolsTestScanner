@@ -1,0 +1,55 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+
+	<localRepository>D:/Workspaces/DroolsPruebaConcepto/droolsTestScanner/repository</localRepository>
+	<profiles>
+		<profile>
+			<id>kie-profile</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<repositories>
+				<repository>
+					<id>central</id>
+					<url>http://repo1.maven.org/maven2</url>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+
+
+
+				<repository>
+					<id>internal</id>
+					<url>http://artifactory.ceiba.com.co/artifactory/remote-repos/</url>
+					<releases>
+						<enabled>true</enabled>
+						 <updatePolicy>always</updatePolicy>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						 <updatePolicy>always</updatePolicy>
+					</snapshots>
+				</repository>
+
+
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>central</id>
+					<url>http://repo1.maven.org/maven2</url>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+	</profiles>
+</settings>
