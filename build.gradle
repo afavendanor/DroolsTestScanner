@@ -46,13 +46,13 @@ dependencies {
 	compile group: 'org.kie', name: 'kie-spring', version: '7.9.0.Final'
 	
 	// https://mvnrepository.com/artifact/org.eclipse.aether/aether-impl
-	compile group: 'org.eclipse.aether', name: 'aether-impl', version: '1.1.0'
+	//compile group: 'org.eclipse.aether', name: 'aether-impl', version: '1.1.0'
 	
 	// https://mvnrepository.com/artifact/com.google.code.guice/guice
-	compile group: 'com.google.code.guice', name: 'guice', version: '1.0', ext: 'pom'
+	//compile group: 'com.google.code.guice', name: 'guice', version: '1.0', ext: 'pom'
 	
 	// https://mvnrepository.com/artifact/xerces/xercesImpl
-	compile group: 'xerces', name: 'xercesImpl', version: '2.11.0.SP5'
+	//compile group: 'xerces', name: 'xercesImpl', version: '2.11.0.SP5'
 	
 	
 	
